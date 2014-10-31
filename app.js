@@ -10,4 +10,10 @@ app.get('/template', function (req, res) {
   });
 });
 
+app.get('/testpt', function (req, res) {
+  res.render('testpt/index', {
+    ticket: req.query
+  });
+});
+
 exports.app = app;
