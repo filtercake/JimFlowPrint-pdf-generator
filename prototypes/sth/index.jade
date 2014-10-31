@@ -1,35 +1,11 @@
-doctype html
-html(lang="en")
-  //- | {% include head.html %}
+include ../../includes/head.jade
+include ../../includes/header.jade
+include ../../includes/uilang.jade
+  //-     | {% if site.header %} {% include header.html %} {% endif %}
 
-  head
-  meta(charset="utf-8")
-  meta(name="viewport" content="width=device-width")
-  meta(http-equiv="X-UA-Compatible" content="IE=edge")
-  //- meta(name="description" content="{{ site.description }}")
-
-  //- title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
-
-  link(rel="stylesheet" href="index.css")
-
-  body
-    div.page-content
-      div.wrapper
-
-        //-     | {{ content }}
-        //-     | {% if site.header %} {% include header.html %} {% endif %}
-        //-     | {% if site.post_listing %} {% include post_listing.html %} {% endif %}
-        //-     | {% if site.data_example %} {% include data_example.html %} {% endif %}
-        //-     | {% if site.raphaeljs %} {% include raphael.html %} {% endif %}
-        //-     | {% if site.web_components %} {% include web_components.html %} {% endif %}
-
-        //- | {% if site.footer %} {% include footer.html %} {% endif %}
-
-        | hello world
+.page
+  | hello world
 
 
 code.
-  clicking on ".wrapper" toggles class "hidden" on "target
-
-script
-  | document.addEventListener("DOMContentLoaded",function(){function n(a){var b=a.charAt(0);a=a.split(b);this.clickSelector=a[1];this.classBehavior=a[2].trim().split(" ")[0];this.classValue=a[3];this.targetSelector=a[5]}function f(a,b,c,d){this.clickSelector=a;this.classBehavior="s"==b.charAt(b.length-1)?b.substring(0,b.length-1):b;this.classValue="."==c.charAt(0)?c.substring(1,c.length):c;this.targetSelector=d;this.createEventListener()}for(var g=document.getElementsByTagName("code"),h=g.length,e,k;h--;){var l=g[h],m=l.textContent.trim();if(0===m.lastIndexOf("clicking on",0)){e=l;k=m;break}}e&&(e.parentNode.removeChild(e),f.prototype.createEventListener=function(){function a(a){switch(b.targetSelector){case "target":case "this":case "it":case "itself":case void 0:a.target.classList[b.classBehavior](b.classValue);break;default:for(var c=document.querySelectorAll(b.targetSelector),d=c.length;d--;)c.item(d).classList[b.classBehavior](b.classValue)}"a"==a.target.nodeName.toLowerCase()&&a.preventDefault()}var b=this,c=document.querySelectorAll(b.clickSelector),d=c.length;if(1>d)throw Error("There's no element matching your \""+b.clickSelector+'" CSS selector.');for(;d--;)c.item(d).addEventListener("click",a)},k.split("clicking on").forEach(function(a){a&&(a=new n(a.trim()),new f(a.clickSelector,a.classBehavior,a.classValue,a.targetSelector))}))});
+  clicking on ".page" toggles class "toggled" on "target"

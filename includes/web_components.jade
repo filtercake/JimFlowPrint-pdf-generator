@@ -1,0 +1,13 @@
+script(src="bower_components/platform/platform.js")
+
+p
+  | platform.js loaded
+
+
+| {% for element in site.elements %}
+link(rel="import" href="elements/{{ element }}.html")
+| {% endfor %}
+
+| {% for element in site.elements %}
+<{{ element }}></{{ element }}>
+| {% endfor %}
