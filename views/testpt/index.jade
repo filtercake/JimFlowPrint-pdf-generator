@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  //- | {% include head.html %}
+
+  head
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width")
+  meta(http-equiv="X-UA-Compatible" content="IE=edge")
+  //- meta(name="description" content="{{ site.description }}")
+
+  //- title {% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}
+
+  link(rel="stylesheet" href="index.css")
+
+  body
+    div.page-content
+      div.wrapper
+
+      //-     | {{ content }}
+          
+      //-     | {% if site.header %} {% include header.html %} {% endif %}
+      //-     | {% if site.post_listing %} {% include post_listing.html %} {% endif %}
+      //-     | {% if site.data_example %} {% include data_example.html %} {% endif %}
+      //-     | {% if site.raphaeljs %} {% include raphael.html %} {% endif %}
+      //-     | {% if site.web_components %} {% include web_components.html %} {% endif %}
+
+      //- | {% if site.footer %} {% include footer.html %} {% endif %}
+
+  | hello world
