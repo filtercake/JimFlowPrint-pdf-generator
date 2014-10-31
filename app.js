@@ -2,18 +2,19 @@ var express = require('express');
 var app = express();
 app.set('view engine', 'jade');
 
-app.use(express.static(__dirname + '/views'));
 
-app.get('/template', function (req, res) {
-  res.render('ticket', {
+
+app.set('views', process.cwd() + '/prototypes');
+app.use(express.static(__dirname + '/prototypes'));
+
+
+app.get('/:prototype', function (req, res) {
+  var prototype = req.params.prototype;
+  res.render( prototype + '/index', {
     ticket: req.query
   });
 });
 
-app.get('/testpt', function (req, res) {
-  res.render('testpt/index', {
-    ticket: req.query
-  });
-});
+
 
 exports.app = app;

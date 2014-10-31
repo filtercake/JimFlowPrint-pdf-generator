@@ -20,10 +20,10 @@ gulp.task('test', function() {
 
 
 sources = {
-  sass: "views/**/*.{sass,scss}"
+  sass: "protoypes/**/*.{sass,scss}"
 };
 destinations = {
-  css: "views/"
+  css: "protoypes/"
 };
 
 
