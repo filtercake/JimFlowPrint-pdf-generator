@@ -6,6 +6,7 @@ app.set('view engine', 'jade');
 
 app.set('views', process.cwd() + '/prototypes');
 app.use(express.static(__dirname + '/prototypes'));
+app.use(express.static(__dirname + '/includes'));
 
 
 app.get('/:prototype', function (req, res) {
