@@ -1,10 +1,9 @@
 {
-  "name": "JimFlowPrint-pdf-generator",
-  "version": "0.0.0",
-  "description": "Generate generic ticket templates as pdf",
+  "name": "The Homer",
+  "version": "0.1.0",
+  "description": "prototyping canvas with jade and sass",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/gulp/bin/gulp.js test"
   },
   "author": "",
   "license": "ISC",
